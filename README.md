@@ -165,7 +165,7 @@ To assess differences in response consistency between groups, the figure below c
 
 *Figure 9. Comparison of Person-Level Variance in the Flagged and Clean Sample*
 
-| Person-Level Variance in the Flagged Sample (N = 388) | Person-Level Variance in the Clean Sample (N = 1628 |
+| Person-Level Variance in the Flagged Sample (N = 388) | Person-Level Variance in the Clean Sample (N = 1628) |
 |--------|--------|
 | <img width="400" height="280" alt="image" src="https://github.com/user-attachments/assets/27fd52c5-c121-4bd6-bc11-8f8951d6b42b" />|<img width="400" height="280" alt="image" src="https://github.com/user-attachments/assets/29f473f9-8214-4c90-9ec1-04cc975e63a5" />|
 
