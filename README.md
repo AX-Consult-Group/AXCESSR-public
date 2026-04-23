@@ -23,7 +23,7 @@ AXCESSR was not built with data science as an afterthought. From initial constru
 
 *Figure 1. AXCESSR Development Pipeline*
 
-<img width="500" height="500" alt="image" src="https://github.com/user-attachments/assets/b65162ee-d8a6-4b12-bc70-22b1afb5c64a" />
+<img width="2475" height="1779" alt="Instrument Design" src="https://github.com/user-attachments/assets/5e99d5e7-f83d-4e2e-995c-a41c96b9e05c" />
 
 The pipeline above illustrates the five core development phases of AXCESSR - from theoretical construct mapping through to the adaptive decision engine - each phase producing data that informed the next.
 
