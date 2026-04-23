@@ -1,0 +1,26 @@
+
+---
+title: "AXCESSR UX Research"
+author: "Tilabo Williamson"
+date: "2026-04-23"
+format:
+  html:
+    theme: cosmo
+    code-fold: true
+    code-summary: "Show code"
+    code-tools: true
+    toc: true
+    embed-resources: true
+editor: 
+  markdown: 
+    wrap: 72
+execute:
+  freeze: auto
+---
+
+```{r echo=FALSE}
+library(pacman)
+p_load(magrittr, tidyverse, psych, dplyr, prettydoc, haven, janitor, readxl, writexl, stringr, here, purrr, tibble, ggplot2, kableExtra, e1071, mirt, corrplot, lavaan, scales, patchwork, ggupset)
+```
+
+# Background
