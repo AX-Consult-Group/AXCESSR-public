@@ -173,7 +173,7 @@ The flagged sample (N = 388) shows a broader and more irregular spread of person
 
 To better understand how flagged respondents differ from the rest of the sample, the figure below compares score distributions across key domains. Density curves are shown for both clean and flagged groups, allowing for a direct visual comparison of their response patterns.
 
-Figure X. Comparison of Score Distributions Between the Flagged and Clean Sample
+Figure 10. Comparison of Score Distributions Between the Flagged and Clean Sample
 
 <img width="787" height="486" alt="image" src="https://github.com/user-attachments/assets/07d91c35-5a24-4667-9f1b-fc0b9e4d2e8b" />
 
