@@ -23,11 +23,11 @@ AXCESSR was not built with data science as an afterthought. From initial constru
 
 *Figure 1. AXCESSR Development Pipeline*
 
-<img width="650" height="600" alt="AXCESSR Development Pipeline" src="https://github.com/user-attachments/assets/1c2e0524-d769-4e10-98ea-50e7d12f7f1b" />
+<img width="408" height="356" alt="AXCESSR Development Pipeline V2" src="https://github.com/user-attachments/assets/f8f88d90-b866-4c3d-950c-4d32aa001feb" />
 
-The pipeline above illustrates the five core development phases of AXCESSR - from theoretical construct mapping through to the adaptive decision engine - each phase producing data that informed the next.
+The pipeline above illustrates the three core development phases of AXCESSR - from theoretical construct mapping through to the adaptive decision engine - each phase producing data that informed the next.
 
-### **1) Product Conceptualisation**
+### **1) Conceptualisation**
 
 AXCESSR is a psychometric-based credit risk assessment platform designed to extend financial access to individuals overlooked by traditional credit origination methods - either due to limited credit history or an overestimation of risk based on conventional metrics. Rather than relying on historical financial data, the platform evaluates creditworthiness through the measurement of stable personal dispositions shown to predict financial decision-making and repayment behaviour.
 
@@ -35,9 +35,9 @@ The platform targets two primary markets: the student loan market, where million
 
 *Figure 2. Process for Obtaining a Student Loan*
 
-<img width="700" height="400" alt="image" src="https://github.com/user-attachments/assets/96a27274-a8a4-4a9e-8c8a-c23037e195a7" />
+XXX
 
-### **2) Instrument Design**
+#### Instrument Design
 
 Item development drew on a structured review of established psychometric frameworks, adapting content from validated instruments across each risk domain. Source instruments included the International Personality Item Pool (IPIP), the HEXACO Personality Inventory, the Schwartz Value Survey (SVS), the Trait Emotional Intelligence Questionnaire (TEIQue), the Short Dark Triad (SD3), the Edwards Compulsive Buying Scale (ECBS), the Barratt Impulsivity Scale, the Sensation Seeking Scale, and the UPPS Impulsive Behaviour Scale.
 
@@ -49,7 +49,7 @@ The below figure illustrates the diverse psychological frameworks and reputable 
 
 <img width="1000" height="700" alt="Instrument Design" src="https://github.com/user-attachments/assets/dbdc4bed-83db-49b3-99f0-bf6d39f32f78" />
 
-### **3) Psychometric Validation**
+### **2) Data Validity**
 
 *Figure 4. Validation Pipeline*
 
@@ -110,11 +110,15 @@ The bar chart confirms that distributional shift is concentrated in the Values d
 
 The density curves corroborate the PSI findings. For Emotion Traits and Personality, the V1 and V2 distributions are almost indistinguishable. Emotion States and Total Risk show a slight tightening of the distribution in V2 - consistent with the removal of noisy items reducing score variance. The Values domain shows the most visible shift, with the V2 distribution marginally narrower and shifted slightly rightward, reflecting the influence of the removed items on the lower end of the score range. Across all domains, the core shape of the distribution is preserved, confirming that the revised instrument measures the same underlying constructs in a substantively equivalent way.
 
-### **4) UX Research**
+### **3) UX Research**
 
 Psychometric rigour is a necessary but insufficient condition for a viable assessment product. UX research was conducted alongside validation to evaluate the candidate-facing experience and identify response variability attributable to presentation rather than construct variance.
 
-*Table 3. UX MEtrics Summary*
+#### A|B Testing
+
+In order to improve response quality, A/B testing was conducted to evaluate the impact of UX-driven changes to the assessment instrument. Version B of the survey was developed by iteratively refining the assessment design based on key UX metrics, with the goal of reducing low-quality responses and improving overall participant engagement. The following quality flags were used to compare performance across both versions:
+
+*Table 3. UX Metrics Summary*
 
 | Metric | Explanation |
 |-------------------|-----------------------------------------------------|
@@ -132,7 +136,7 @@ Psychometric rigour is a necessary but insufficient condition for a viable asses
 
 ##### Completion Times
 
-Completion time provides a useful lens through which to examine candidate engagement. While most respondents worked steadily through the assessment, a subset completed unusually quickly, raising concerns about inattentive responding. The histogram below illustrates the spread of completion times across the full sample.
+Completion time is a key metric for AXCESSR as it provides a useful lens through which to examine candidate engagement, particularly as the original AXCESSR assessment (Version A) consisted of 247 items. While most respondents worked steadily through the assessment, a subset completed unusually quickly, raising concerns about inattentive responding, whilst other took over 2 hours to complete the assessment. The histogram below illustrates the spread of completion times across the full sample.
 
 *Figure 7. Total Time Taken Distribution*
 
@@ -140,15 +144,79 @@ Completion time provides a useful lens through which to examine candidate engage
 
 Completion times ranged from 39 seconds to nearly two hours (7155 seconds), with a median of 1834 seconds (~30 minutes) and a mean of 2043 seconds (~34 minutes). The central bulk of candidates fell between the first and third quartiles (1372–2525 seconds), indicating a typical completion window of 23–42 minutes. The right‑skewed distribution reflects a small group of candidates who took substantially longer, while the left tail captures the ~10% of speeders flagged for accelerated completion. This pattern underscores that the majority of candidates engaged at a reasonable pace, but a notable minority exhibited atypical response behaviour consistent with low engagement.
 
-##### Person-Level Variance
+##### Version A
 
-Person-level standard deviations offer a useful perspective on response consistency across the assessment. Higher variability can indicate differentiated responding across items, while unusually low variability may suggest patterned or inattentive answering. The histogram below displays the distribution of standard deviations across all respondents.
+*Table X. UX Quality Flag Summary - Version A (N = 2016)*
 
-*Figure 8. Person-Level Variance Distribution*
+| Quality Flag | Criterion | Count | Percentage |
+|---|---|:---:|:---:|
+| Speeder | Total time taken < 884 seconds | 201 | 9.97% |
+| Low Variance | Person SD < 0.11 | 50 | 2.48% |
+| Long String | Longest string > 15 | 86 | 4.27% |
+| Boundary Overuse | Proportion of 0s > 0.28 or 1s > 0.50 | 192 | 9.52% |
+| Completion (single sitting) | Did not complete in a single sitting | 251 | 12.45% |
+| High Click-Through | Click-through rate > 0.70 | 218 | 10.81% |
+| Early Drop-Off | Abandoned before item 10 | 91 | 4.51% |
+| Uniform RT (Inter-item) | RT consistency SD < 1.5 | 67 | 3.32% |
+| Early Onset of Disengagement | Onset of disengagement before item 60 | 222 | 11.01% |
+| Loading Time | Average page load time exceeds 5 seconds | 215 | 10.66% |
+| Connectivity Drop | One or more connectivity drop events | 364 | 18.06% |
 
-<img width="550" height="300" alt="image" src="https://github.com/user-attachments/assets/bd4bf96c-e4a8-4f3b-b709-dc5e3f0738b7" />
+###### Recommendations
 
-Person-level standard deviations ranged from 0.00 to 0.499, with a median of 0.345 and a mean of 0.333. The middle 50% of respondents fell between 0.291 and 0.393, indicating a typical band of moderate response variability. The distribution is slightly left-skewed, with most respondents clustering between approximately 0.30 and 0.40, and a thinner tail extending toward very low values. This lower tail suggests a small subset of respondents with minimal variation in their answers, potentially reflecting uniform or inattentive responding. Overall, the pattern indicates that most respondents demonstrated a reasonable degree of variability, consistent with engaged and differentiated answering, while a minority exhibited atypical response patterns.
+**1. Adaptive Item Delivery via CAT**
+
+With 11.86% of candidates failing to complete in a single sitting and click-through rates flagging 10.81% as likely rushing, instrument length is the primary UX risk. A CAT engine addressing this single lever produces downstream improvements across most metrics in Version B - completion rate, click-through, drop-off, onset of disengagement, connectivity drops, and load time exposure all improve as direct consequences of shorter sessions.
+
+**2. Platform Load Optimisation**
+
+With 11.01% of Version A candidates experiencing load times exceeding 5 seconds and 16.12% recording at least one connectivity drop event, platform performance represents a meaningful risk independent of candidate behaviour. Asset delivery optimisation and offline-capable session caching are particularly relevant given variable connectivity in the deployment context.
+
+**3. In-Session Engagement Support**
+
+Speeders (9.97%), long string responding (4.27%) and boundary overuse (9.52%) in Version A indicate that a meaningful minority of candidates are disengaged form the assessment and trying to get through it quickly or with as little effort as possible. Progress indicators, estimated time remaining, and structured domain-break screens are low-cost interventions that delay or prevent onset of disengagement.
+
+These three interventions are not independent. CAT reduces session length, which reduces fatigue, connectivity exposure, and the motivation to rush simultaneously. Platform optimisation reduces the friction that can trigger early drop-off. Engagement support addresses the candidates who would disengage regardless of length. Together they address the full spectrum of UX risk identified in Version A - behavioural, dispositional, and infrastructural.
+
+##### Version B
+
+Version B reflects the changes in UX quality metrics following the implementation of recommendations made after Version A.
+
+*Table X. UX Quality Flag Summary - Version B (N = 2016)*
+
+| Quality Flag | Criterion | Count | Percentage |
+|---|---|:---:|:---:|
+| Speeder | Total time taken < 442 seconds | 46 | 2.28% |
+| Low Variance | Person SD < 0.11 | 50 | 2.48% |
+| Long String | Longest string > 15 | 0 | 0% |
+| Boundary Overuse | Proportion of 0s > 0.28 or 1s > 0.50 | 0 | 0% |
+| Completion (single sitting) | Did not complete in a single sitting | 86 | 4.27% |
+| High Click-Through | Click-through rate > 0.70 | 6 | 0.3% |
+| Early Drop-Off | Abandoned before item 50 | 3 | 0.15% |
+| Uniform RT (Inter-item) | RT consistency SD < 1.5 | 6 | 0.3% |
+| Early Onset of Disengagement | Onset of disengagement before item 30 | 0 | 0% |
+| Loading Time | Average page load time exceeds 5 seconds | 0 | 0% |
+| Connectivity Drop | One or more connectivity drop events | 130 | 6.45% |
+
+##### A|B Comparison
+
+The most immediate consequence of CAT-based adaptive delivery is a compression of completion times. Version A shows the characteristic right-skewed distribution of a fixed-form instrument — a healthy central mass with a long tail driven by connectivity issues, session abandonment, and disengagement. Version B simulates the expected shift under adaptive delivery: a tighter, more normally distributed profile centred around a shorter mean, with both extremes reduced. The disappearance of the extreme right tail reflects fewer candidates experiencing prolonged sessions, while the left tail contraction reflects the adjusted speeder threshold calibrated to the shorter instrument.
+
+*Figure X. Completion Time Distribution Comparison*
+
+<img width="1245" height="619" alt="image" src="https://github.com/user-attachments/assets/ee7e6539-4b5a-4992-8b85-7226b736a8ea" />
+
+Four continuous UX metrics are compared below as density overlays, allowing direct visual comparison of distributional shift between versions. Click-through rate should shift leftward in Version B - fewer candidates rushing. RT consistency SD should shift rightward - more natural variation in pacing. Load time should compress toward zero following platform optimisation. Onset of disengagement should shift rightward and thin out, reflecting fewer candidates hitting a disengagement point and those who do reaching it later in the session.
+
+*Figure X. UX Metric Distribution Comparison*
+
+<img width="2112" height="1536" alt="image" src="https://github.com/user-attachments/assets/b88fc0e9-8139-404b-ab25-7dd619614f87" />
+
+The dumbbell chart below provides a single consolidated view of improvement across all eleven UX metrics, comparing flag prevalence between Version A and Version B. Each flag is shown as a connected pair — the dark point representing Version A prevalence and the light point representing Version B. Metrics where the gap between points is largest represent the greatest UX gains from the three interventions. Metrics with little movement reflect either dispositional factors that UX changes cannot address, or infrastructure constraints that require solutions beyond instrument redesign.
+
+*Figure X. UX Flag Prevalence Comparison*
+
+<img width="1920" height="1344" alt="image" src="https://github.com/user-attachments/assets/04596745-9d24-43b0-a352-caed30c9d089" />
 
 #### **Response Quality Screening**
 
@@ -199,10 +267,3 @@ To better understand how flagged respondents differ from the rest of the sample,
 
 This comparison shows that respondents with quality flags exhibit noticeably different score patterns, with several domains displaying irregular or bimodal distributions. In contrast, the clean sample appears more stable and closer to expected distributional shapes. This divergence suggests that flagged responses may introduce noise or distortion, reinforcing the importance of removing or carefully reviewing suspicious respondents to maintain analytical rigor.
 
-### **5) Decision Engine**
-
-Candidate responses are scored against the revised 206-item instrument, aggregated across the four risk domains using a weighted composite approach, and converted to a total risk score on a standardised 0–1 scale. Candidates scoring below the 0.30 threshold are classified as lower risk and enter the funding consideration pool.
-
-The engine supports computerised adaptive testing (CAT), whereby item selection is determined dynamically on the basis of prior responses — concentrating measurement precision where it is most needed and reducing burden where sufficient information has already been obtained.
-
-AXCESSR demonstrates that rigorous psychometric methodology and scalable product engineering are not competing priorities. Each stage of development - from construct mapping to adaptive item delivery - was data-informed, and each data decision shaped the product.
