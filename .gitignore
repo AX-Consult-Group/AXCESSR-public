@@ -47,3 +47,11 @@ po/*~
 
 # RStudio Connect folder
 rsconnect/
+
+# Files to ignore
+00_axcessr_preparation.qmd
+data/AXCESSR_cleaned_data - 2026.04.23.xlsx
+data/AXCESSR_cleaned_removed_data - 2026.04.24.xlsx
+
+/.quarto/
+**/*.quarto_ipynb
