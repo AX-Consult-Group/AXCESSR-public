@@ -31,6 +31,8 @@ The pipeline above illustrates the three core development phases of AXCESSR - fr
 
 AXCESSR is a psychometric-based credit risk assessment platform designed to extend financial access to individuals overlooked by traditional credit origination methods - either due to limited credit history or an overestimation of risk based on conventional metrics. Rather than relying on historical financial data, the platform evaluates creditworthiness through the measurement of stable personal dispositions shown to predict financial decision-making and repayment behaviour.
 
+Figma Conceptualisation Presentation Link -> https://www.figma.com/deck/BWVGJvpN2KeOfJEtiEwUf5
+
 *Figure 2. The Funding Access Gap*
 
 <img width="368" height="343" alt="image" src="https://github.com/user-attachments/assets/2ea18234-df5a-4bdd-be35-c5864e69655a" />
