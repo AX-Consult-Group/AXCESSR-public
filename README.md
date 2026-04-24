@@ -23,7 +23,7 @@ AXCESSR was not built with data science as an afterthought. From initial constru
 
 *Figure 1. AXCESSR Development Pipeline*
 
-<img width="2475" height="1779" alt="Instrument Design" src="https://github.com/user-attachments/assets/5e99d5e7-f83d-4e2e-995c-a41c96b9e05c" />
+<img width="650" height="600" alt="AXCESSR Development Pipeline" src="https://github.com/user-attachments/assets/1c2e0524-d769-4e10-98ea-50e7d12f7f1b" />
 
 The pipeline above illustrates the five core development phases of AXCESSR - from theoretical construct mapping through to the adaptive decision engine - each phase producing data that informed the next.
 
@@ -50,6 +50,10 @@ The below figure illustrates the diverse psychological frameworks and reputable 
 <img width="1000" height="700" alt="Instrument Design" src="https://github.com/user-attachments/assets/dbdc4bed-83db-49b3-99f0-bf6d39f32f78" />
 
 ### **3) Psychometric Validation**
+
+*Figure 4. Validation Pipeline*
+
+<img width="725" height="247" alt="Validation Pipeline" src="https://github.com/user-attachments/assets/96d90b15-1623-44bb-ac9b-a42a73fd8748" />
 
 #### Validation results  
 
@@ -94,13 +98,13 @@ A key question following item removal is whether the revised instrument produces
 
 The PSI results indicate that item removal had minimal impact on candidate risk classifications across most domains. Four of five scores fall within the stable range (PSI < 0.10), with Emotion Traits Risk showing negligible shift (PSI = 0.004) and Personality Risk and Emotion States Risk both well within acceptable bounds. The moderate shift observed in Values Risk (PSI = 0.19) is notable given that only 9 items were removed from this domain - suggesting those items were disproportionately influential in shaping the score distribution. Critically, no domain exceeds the intervention threshold of 0.25.
 
-*Figure 4. Population Stability Index (PSI) by Domain*
+*Figure 5. Population Stability Index (PSI) by Domain*
 
-<img width="1000" height="500" alt="psi_bar" src="https://github.com/user-attachments/assets/4c2737e4-1db2-4f40-a7c3-d4d8af2eb484" />
+<img width="1000" height="600" alt="psi_bar" src="https://github.com/user-attachments/assets/4bdf8c89-24bb-4ce2-993e-9958f345b302" />
 
 The bar chart confirms that distributional shift is concentrated in the Values domain. All other domains sit comfortably below the stable threshold, and the total weighted risk score sits precisely at the boundary (PSI = 0.10) - indicating that at the overall scoring level, V1 and V2 produce near-equivalent candidate classifications.
 
-*Figure 5. Score Distributions: V1 (247 items) vs V2 (206 items)*
+*Figure 6. Score Distributions: V1 (247 items) vs V2 (206 items)*
 
 <img width="1000" height="600" alt="psi_density" src="https://github.com/user-attachments/assets/9e23745d-a946-49b0-80fe-bd023ae1fe69" />
 
@@ -130,7 +134,7 @@ Psychometric rigour is a necessary but insufficient condition for a viable asses
 
 Completion time provides a useful lens through which to examine candidate engagement. While most respondents worked steadily through the assessment, a subset completed unusually quickly, raising concerns about inattentive responding. The histogram below illustrates the spread of completion times across the full sample.
 
-*Figure 6. Total Time Taken Distribution*
+*Figure 7. Total Time Taken Distribution*
 
 <img width="550" height="300" alt="image" src="https://github.com/user-attachments/assets/5b74b661-ccc0-4356-b3c8-239162a630b8" />
 
@@ -140,7 +144,7 @@ Completion times ranged from 39 seconds to nearly two hours (7155 seconds), with
 
 Person-level standard deviations offer a useful perspective on response consistency across the assessment. Higher variability can indicate differentiated responding across items, while unusually low variability may suggest patterned or inattentive answering. The histogram below displays the distribution of standard deviations across all respondents.
 
-*Figure 7. Person-Level Variance Distribution*
+*Figure 8. Person-Level Variance Distribution*
 
 <img width="550" height="300" alt="image" src="https://github.com/user-attachments/assets/bd4bf96c-e4a8-4f3b-b709-dc5e3f0738b7" />
 
@@ -167,7 +171,7 @@ An initial sample of N = 2016 candidates completed the assessment. Prior to scor
 
 *Boundary overuse* — proportion of zero responses exceeding 0.28 or proportion of one responses exceeding 0.50, both derived from the 95th percentile. 
 
-*Figure 8. Response Quality Flag*
+*Figure 9. Response Quality Flag*
 
 The figure below illustrates the intersection structure of response quality flags across the 388 flagged candidates. Each bar represents a unique combination of criteria, with bar height indicating the number of candidates flagged by that particular combination.
 
@@ -179,7 +183,7 @@ The majority of flagged candidates (144) were caught by the speeder criterion al
 
 To assess differences in response consistency between groups, the figure below compares person-level variance for respondents flagged on quality checks versus those retained in the clean sample. Examining variability at the individual level provides insight into how consistently participants engaged with the assessment items.
 
-*Figure 9. Comparison of Person-Level Variance in the Flagged and Clean Sample*
+*Figure 10. Comparison of Person-Level Variance in the Flagged and Clean Sample*
 
 | Person-Level Variance in the Flagged Sample (N = 388) | Person-Level Variance in the Clean Sample (N = 1628) |
 |--------|--------|
@@ -189,7 +193,7 @@ The flagged sample (N = 388) shows a broader and more irregular spread of person
 
 To better understand how flagged respondents differ from the rest of the sample, the figure below compares score distributions across key domains. Density curves are shown for both clean and flagged groups, allowing for a direct visual comparison of their response patterns.
 
-*Figure 10. Comparison of Score Distributions Between the Flagged and Clean Sample*
+*Figure 11. Comparison of Score Distributions Between the Flagged and Clean Sample*
 
 <img width="787" height="486" alt="image" src="https://github.com/user-attachments/assets/07d91c35-5a24-4667-9f1b-fc0b9e4d2e8b" />
 
