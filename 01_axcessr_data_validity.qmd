@@ -5,7 +5,7 @@
 
 ---
 title: "AXCESSR Data Validity"
-author: "Tilabo Williamson"
+author: "Tilabo Williamson, Caitlin Buenk & Jürgen Becker (Project Lead) - AX Consult Group"
 date: "2026-04-23"
 format:
   html:
@@ -61,7 +61,7 @@ Below is a figure outlining the validation process.
 ```{r fig-pipeline}
 #| out-width: "100%"
 #| fig-align: center
-
+# Reading in validation pipeline figure
 knitr::include_graphics(here::here("image/axcessr_validation_pipeline.svg"))
 ```
 
@@ -85,7 +85,9 @@ evidence of poor performance on **all three** criteria to proceed to removal con
 
 The below table summarises the criteria and where problematic items were flagged. A total of **41** items were flagged across all three metrics. These items were defined as problematic and removed  to create a streamlined 206‑item instrument (V2).
 
-```{r}
+```{r problematic-item-table}
+# Problematic item table
+
 flagging_table <- tibble::tribble(
   ~Diagnostic,                                  ~Total, ~Personality, ~Values, ~Emotion_Traits, ~Emotion_States,
   "IRT subfactor loading (< 0.30)",             45,     23,           9,       3,               10,
@@ -111,7 +113,6 @@ flagging_table %>%
   column_spec(1, width = "40%")
 ```
 
----
 
 ## Score Distribution Comparison
 
@@ -121,6 +122,7 @@ with reduced floor and ceiling effects.
 
 ```{r score-distributions}
 # Score Comparison Table
+
 comparison <- validity_data %>%
   select(id,
          # Original scores
@@ -134,7 +136,6 @@ comparison <- validity_data %>%
   mutate(across(everything(), as.numeric))
 
 # Mean comparison table
-
 
 comparison_table <- tibble(
   Score = c(
@@ -189,6 +190,7 @@ consistency without destabilising the existing structure.
 
 ```{r fig-domain-reliability}
 # Domain Reliability Comparison
+
 knitr::include_graphics(here::here("image/reliability_domain_dotplot.png"))
 ```
 
@@ -196,6 +198,8 @@ knitr::include_graphics(here::here("image/reliability_domain_dotplot.png"))
 To assess whether item removal materially altered candidate risk profiles, the Population Stability Index (PSI) was computed between original (V1) and revised (V2) scores at the total and domain level. PSI quantifies the distributional shift between two scoring populations and is widely used in credit risk modelling as a model monitoring metric. Scores below 0.10 indicate a stable distribution; values between 0.10 and 0.25 indicate moderate shift warranting investigation; values above 0.25 indicate significant drift requiring model review.
 
 ```{r PSI}
+# PSI scores across key domains
+
 # Total weighted score PSI
 psi_total <- psi(
   base   = comparison$total_risk_weighted,
@@ -329,6 +333,7 @@ The bar chart confirms that distributional shift is concentrated in the Values d
 
 ```{r density-overlays}
 # Density Overlays 
+
 score_long <- comparison %>%
   select(
     `Total Risk\n(Weighted)` = total_risk_weighted,
@@ -388,6 +393,8 @@ ggplot(score_long, aes(x = Score, fill = Version, colour = Version)) +
 
 ggsave("image/psi_density.png", width = 10, height = 6, dpi = 180, bg = "white")
 ```
+
+
 The density curves corroborate the PSI findings. For Emotion Traits and Personality, the V1 and V2 distributions are almost indistinguishable. Emotion States and Total Risk show a slight tightening of the distribution in V2 - consistent with the removal of noisy items reducing score variance. The Values domain shows the most visible shift, with the V2 distribution marginally narrower and shifted slightly rightward, reflecting the influence of the removed items on the lower end of the score range. Across all domains, the core shape of the distribution is preserved, confirming that the revised instrument measures the same underlying constructs in a substantively equivalent way.
 
 
@@ -425,8 +432,6 @@ structural_table %>%
   column_spec(3, width = "45%")
 ```
 
-
----
 
 # Conclusion
 

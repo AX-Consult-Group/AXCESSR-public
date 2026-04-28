@@ -4,7 +4,7 @@
 
 ---
 title: "AXCESSR UX Research"
-author: "Tilabo Williamson"
+author: "Tilabo Williamson, Caitlin Buenk & Jürgen Becker (Project Lead) - AX Consult Group"
 date: "2026-04-23"
 format:
   html:
@@ -57,12 +57,16 @@ response_data <- read_excel(here("data/AXCESSR_response_data_isolated - 2026.04.
 
 ```{r setup}
 #| include: false
+# Setup
+
 set.seed(42)
 n_items <- 247
 ```
 
 ```{r flag-groups}
 #| include: false
+# Grouping by flags
+
 # Candidates are grouped into three engagement tiers based on their total flag count from the validation phase. These tiers drive all downstream metric simulation.
 
 ux_data <- response_data %>%
@@ -84,6 +88,8 @@ The length of an assessment is one of the most direct determinants of user exper
 ```{r time-distribution}
 #| fig-width: 8
 #| fig-height: 5
+# Time Distribution
+
 time_stats <- ux_data %>%
   summarise(
     min_time    = min(time_taken_seconds,    na.rm = TRUE),
@@ -139,9 +145,11 @@ ggplot(ux_data, aes(x = time_taken_seconds)) +
 
 The distribution is strongly right-skewed - the majority of candidates completed the assessment within a reasonable window (median ~31 minutes), but a long tail of outliers extends well beyond 2 hours, pulling the mean (~34 minutes) above the median. This suggests that while most candidates engage at a normal pace, a subset experience significant delays. The minimum of 39 seconds flags near-certain speeding behaviour. Both extremes represent UX problems that Version B should address.
 
-```{r version-b-time-taken}
+```{r time-taken-version-B}
+# Time Taken (Verison B)
+
 # Version B: CAT reduces instrument length — time distribution tighter and shorter
-# Mean drops from ~2042s to ~1200s, SD compressed, extremes reduced
+
 set.seed(43)
 
 speeder_threshold_a  <- 884
@@ -173,9 +181,10 @@ Response variance is the standard deviation of a candidate's responses across al
 
 Person-level variance is a direct window into response authenticity. Where time taken flags candidates who rushed through the instrument, response variance flags those who engaged without genuine differentiation - selecting effectively the same response regardless of item content. In a 247-item assessment covering four psychologically distinct domains, meaningful variance is expected; a candidate whose responses barely fluctuate across personality, values, and emotional risk items is unlikely to have engaged with the content at all. The distribution of person-level variance is shown below.
 
-```{r response-variance}
+```{r response-variance-distribution}
 #| fig-width: 8
 #| fig-height: 5
+# Response Variance Distribution
 
 sd_stats <- ux_data %>%
   summarise(
@@ -232,9 +241,11 @@ ggplot(ux_data, aes(x = person_sd)) +
 
 The distribution is left-skewed and centred around a mean and median of 0.30, suggesting the majority of candidates varied their responses meaningfully across items. The left tail is the primary concern - candidates approaching zero variance responded near-identically across all 247 items, a pattern inconsistent with genuine engagement across four psychologically distinct domains. Version B interventions should aim to shift this left tail rightward without disturbing the healthy central distribution.
 
-```{r version-b-response-variance}
+```{r response-variance-version-B}
+# Response Variance (Verison B)
+
 # Version B: Engagement support shifts left tail rightward
-# Low-flag candidates largely unchanged; high-flag candidates improve
+
 var_b_params <- tibble(
   flag_group = c("low", "medium", "high"),
   mean_var   = c(0.34,  0.28,     0.20),
@@ -256,9 +267,10 @@ ux_version_b %<>%
 
 Long string responding refers to consecutive runs of identical responses — for example, answering 0 repeatedly across many items without variation. Taken directly from the real validation data (`longstring`). No simulation required. Flagged where the longest consecutive run of identical responses exceeded the 95th percentile (15 items).
 
-```{r version-b-longstring}
+```{r longstring-version-B}
+# Longstring (Version B)
 # Version B: Section breaks interrupt run patterns — fewer long strings
-# Probability of longstring flag reduced across all groups
+
 ux_version_b %<>%
   mutate(
     longstring = case_when(
@@ -275,9 +287,11 @@ ux_version_b %<>%
 Boundary overuse captures systematic overreliance on extreme response options — consistently selecting 0 or 1 rather than the full response scale. Taken directly from the real validation data (`prop_one` and
 `prop_zero`). No simulation required. Flagged where the proportion of zero or one responses exceeds 95th percentile (zeros -> 0.28 or ones -> 0.50).
 
-```{r version-b-boundary}
+```{r boundary-version-B}
+# Boundary Overuse (Version B)
+
 # Version B: Engagement support reduces extreme responding
-# Boundary overuse probability reduced across all groups
+
 ux_version_b %<>%
   mutate(
     p_boundary = case_when(
@@ -295,7 +309,9 @@ Completion rate is a binary indicator of whether the candidate finished the asse
 reflecting the expectation that disengaged or low-quality responders are
 more likely to abandon the instrument.
 
-```{r completion-rate}
+```{r completion-rate-version-A}
+# Completion Rate (Version A)
+
 # For each respondent, a probability of completing the assessment is assigned based on their flag_group (low = 92%, medium = 70%, high = 35%) rbinom() draws a 0 or 1 for each person, where 1 = TRUE (completed), and 0 = FALSE (did not complete).
 
 ux_version_a <- ux_data %>% 
@@ -309,8 +325,11 @@ ux_version_a <- ux_data %>%
   )
 ```
 
-```{r version-b-completion}
+```{r completion-version-B}
+# Completion Rate (Version B)
+
 # Version B: Shorter instrument → higher completion rates across all groups
+
 ux_version_b %<>%
   mutate(
     p_complete = case_when(
@@ -331,7 +350,9 @@ click-through rates, with an additional offset applied by flag group.
 
 Click-through rate is the proportion of items a candidate answered suspiciously quickly, indicating they may have progressed through the assessment without meaningfully engaging with item content. Simulation anchored in real (`time_taken_seconds`). Flagged where click-through rate exceeds 0.70.
 
-```{r click-through-rate}
+```{r click-through-rate-version-A}
+# Click-through Rate (Version A)
+
 ux_version_a %<>%
   mutate(
     time_z = scale(time_taken_seconds)[,1],
@@ -345,9 +366,11 @@ ux_version_a %<>%
   )
 ```
 
-```{r version-b-clickthrough}
+```{r clickthrough-version-B}
+# Click-through Rate (Version B)
+
 # Version B: Shorter assessment reduces motivation to rush
-# Click-through rate distribution shifted downward
+
 ux_version_b %<>%
   mutate(
     time_z = scale(time_taken_seconds)[,1],
@@ -370,7 +393,9 @@ medium-flag candidates persist longer before abandoning.
 
 Drop-off point is the item number at which a candidate abandoned the assessment without completing it (`completed_single_sitting`). Only assigned to candidates who did not complete in a single sitting. Flagged as "early drop-off" where abandonment occurs before item 100 (version A).
 
-```{r drop-off-point}
+```{r drop-off-point-version-A}
+# Drop-off Point (Version A)
+
 ux_version_a %<>%
   mutate(
     drop_off_item = case_when(
@@ -382,9 +407,10 @@ ux_version_a %<>%
   )
 ```
 
-```{r version-b-dropoff}
-# Drop-off threshold adjusted for CAT: item 50 replaces item 100 (same ~40-50% point)
-# Ranges compressed to reflect shorter instrument (~120 items max)
+```{r dropoff-version-B}
+# Drop-0ff Point (Version B)
+
+# Version B: Drop-off threshold adjusted for CAT: Ranges compressed to reflect shorter instrument (~120 items max)
 
 ux_version_b %<>%
   mutate(
@@ -407,7 +433,9 @@ where available, with group-level parameters applied otherwise.
 
 Inter-item response time consistency is the standard deviation of per-item response times across the assessment - a low value indicates the candidate responded at a suspiciously uniform pace throughout. Flagged where RT consistency SD falls below 1.5.
 
-```{r rt-consistency}
+```{r rt-consistency-version-A}
+# Response Time (Version A)
+
 ux_version_a %<>%
   mutate(
     rt_consistency_sd = case_when(
@@ -419,9 +447,11 @@ ux_version_a %<>%
   )
 ```
 
-```{r version-b-rt-consistency}
+```{r rt-consistency-version-B}
+# Response Time (Version B)
+
 # Version B: More genuine engagement → greater natural variation in pacing
-# RT consistency SD increases across all groups
+
 ux_version_b %<>%
   mutate(
     rt_consistency_sd = case_when(
@@ -438,7 +468,9 @@ The item number at which disengagement is estimated to have begun,
 defined as the point where long-string responding, low response
 variance, and uniform inter-item RT converge. Flagged as "early" where onset occurs before item 60 in Version A.
 
-```{r onset-disengagement}
+```{r onset-disengagement-version-A}
+# Onset of Disengagement (Version A)
+
 ux_version_a %<>%
   mutate(
     onset_disengagement = case_when(
@@ -449,10 +481,10 @@ ux_version_a %<>%
   )
 ```
 
-```{r version-b-disengagement}
-# Onset threshold adjusted for CAT: item 30 replaces item 60 (same ~25% point)
-# Ranges capped to reflect ~120 item CAT session
-# More medium and high flag candidates show no disengagement due to shorter session
+```{r disengagement-version-B}
+# Onset of Disengagement (Version B)
+
+# Version B: Onset threshold adjusted for CAT: Ranges capped to reflect ~120 item CAT session
 
 ux_version_b %<>%
   mutate(
@@ -476,7 +508,8 @@ In environments with variable connectivity, platform load time (`load_time_secon
 connectivity interruptions represent meaningful UX signals that sit
 outside candidate behaviour but directly affect engagement quality. Flagged where average page load time exceeds 5 seconds.
 
-```{r load-time}
+```{r load-time-version-A}
+# Load time (Version A)
 ux_version_a %<>%
   mutate(
     load_time_seconds = case_when(
@@ -488,11 +521,11 @@ ux_version_a %<>%
   )
 ```
 
-```{r version-b-loadtime}
-#| message: false
-#| warning: false
+```{r loadtime-version-B}
+# Load time (Version B)
 
 # Version B: Platform optimisation reduces load times across all candidates
+
 ux_version_b %<>%
   mutate(
     load_time_seconds = case_when(
@@ -507,9 +540,12 @@ ux_version_b %<>%
 
 Connectivity drop events are the number of times a candidate lost connection and was forced to reconnect during their assessment session (`connectivity_drops`), potentially disrupting response flow and artificially inflating completion time. Flagged where one or more drop events are recorded.
 
-```{r connectivity-drops}
+```{r connectivity-drops-version-A}
+# Connectivity Drops (Version)
+
 # Base drop probability weakly correlated with flag group
 # Connectivity is largely random but reflects access inequality
+
 ux_version_a %<>%
   mutate(
     p_drop = case_when(
@@ -522,11 +558,10 @@ ux_version_a %<>%
 ```
 
 ```{r version-b-connectivity}
-#| message: false
-#| warning: false
+# Connectivity Drops (Version B)
 
 # Version B: Shorter session = less connectivity exposure
-# Lambda values reduced across all flag groups
+
 ux_version_b %<>%
   mutate(
     p_drop = case_when(
@@ -549,10 +584,11 @@ The table below summarises flag prevalence across the full sample
 (N = 2016), spanning both empirical quality flags and UX engagement 
 metrics.
 ```{r ux-flag-summary-table-a}
+# UX Flag Summary (Version A)
 n_total <- 2016
 
 tibble(
-  `Quality Flag`        = c(
+  `Quality Flag` = c(
     "Speeder",
     "Low Variance",
     "Long String",
@@ -617,6 +653,7 @@ of the validation sample engaged meaningfully with the instrument. The below plo
 ```{r lollipop-flag-summary-a}
 #| fig-width: 9
 #| fig-height: 6
+# Lollipop Figure (Version A)
 
 flag_summary <- tibble(
   flag = c(
@@ -721,10 +758,12 @@ The table below summarises flag prevalence across the full sample
 (N = 2016), spanning both empirical quality flags and UX engagement 
 metrics.
 ```{r ux-flag-summary-table-b}
+# UX Flag Summary (Version B)
+
 n_total <- 2016
 
 tibble(
-  `Quality Flag`        = c(
+  `Quality Flag`= c(
     "Speeder",
     "Low Variance",
     "Long String",
@@ -788,6 +827,7 @@ of the validation sample engaged meaningfully with the instrument. The below plo
 ```{r lollipop-flag-summary-b}
 #| fig-width: 9
 #| fig-height: 6
+# Lollipop Figure (Version B)
 
 flag_summary <- tibble(
   flag = c(
@@ -867,6 +907,7 @@ The most immediate consequence of CAT-based adaptive delivery is a compression o
 ```{r comparison-time-histogram}
 #| fig-width: 10
 #| fig-height: 5
+# Time comparison - histograms
 
 bind_rows(
   ux_version_a %>% mutate(Version = "Version A"),
@@ -908,6 +949,7 @@ Response variance tells a subtler story than time. Where time taken captures beh
 ```{r comparison-variance-histogram}
 #| fig-width: 10
 #| fig-height: 5
+# Response Variance comparison - histograms
 
 bind_rows(
   ux_version_a %>% mutate(Version = "Version A"),
@@ -949,6 +991,7 @@ Four continuous UX metrics are compared below as density overlays, allowing dire
 ```{r comparison-density-overlays}
 #| fig-width: 11
 #| fig-height: 8
+# Density Overlay plots
 
 bind_rows(
   ux_version_a %>% mutate(Version = "Version A"),
@@ -1002,6 +1045,7 @@ bind_rows(
     plot.background  = element_rect(fill = "white", colour = NA)
   )
 ```
+
 ## UX Metric Shift Plot
 
 The dumbbell chart below provides a single consolidated view of improvement across all eleven UX metrics, comparing flag prevalence between Version A and Version B. Each flag is shown as a connected pair — the dark point representing Version A prevalence and the light point representing Version B. Metrics where the gap between points is largest represent the greatest UX gains from the three interventions. Metrics with little movement reflect either dispositional factors that UX changes cannot address, or infrastructure constraints that require solutions beyond instrument redesign.
@@ -1009,6 +1053,7 @@ The dumbbell chart below provides a single consolidated view of improvement acro
 ```{r comparison-dumbbell}
 #| fig-width: 10
 #| fig-height: 7
+# Dumbbell plot comparison
 
 n_total <- 2016
 
