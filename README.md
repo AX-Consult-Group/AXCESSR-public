@@ -2,13 +2,14 @@
 
 <img width="150" height="150" alt="AXCESSR_logo" src="https://github.com/user-attachments/assets/e00f04a0-dce2-4dc4-942c-2d60c8ea33af" />
 
+
 **Introduction:**
 
 Three parties make every student-funding decision: the student, the institution, and the lender. None of them have the data they need to make it well.
 
 In South Africa, roughly 68 000 "missing middle" students sit in the gap between government bursaries (capped at R350,000 household income) and self-funding affordability - and even after recent policy reforms introducing loan funding for the R350K–R600K income band, only about 47% currently receive any support.[^1] South Africa's first-year university dropout rate sits at 35 – 40%, with financial exclusion and poor programmatic fit consistently identified as primary drivers.[^2] In the United States, the picture is no better: as of December 2025, approximately $180 billion in federal student loans were in default across 7.7 million borrowers, and 29.5% of the active portfolio was delinquent by dollar balance - more than double the pre-pandemic rate.[^3] These outcomes share a common cause: students, higher education institutions, and lenders are all making high-stakes decisions on incomplete and asymmetric information about who will succeed academically and financially.
 
-**AXCESSR** addresses this by manufacturing data symmetry across all three parties. It is a psychometric assessment and decision platform that produces a shared, validated signal - derived from four measured psychological domains (personality, values, emotion traits, and emotion states) - that students, Higher Education Institutions (HEIs), and lenders can each act on. Students get evidence of programmatic and career fit before committing time and capital. Institutions get completion-likelihood signals beyond academic records. Lenders get repayment-behaviour predictors that work for thin-file applicants without an established credit history. The same psychometric data point underwrites all three decisions, replacing the fragmented and asymmetric inputs each party currently relies on.
+AXCESSR addresses this by manufacturing data symmetry across all three parties. It is a psychometric assessment and decision platform that produces a shared, validated signal - derived from four measured psychological domains (personality, values, emotion traits, and emotion states) - that students, Higher Education Institutions (HEIs), and lenders can each act on. Students get evidence of programmatic and career fit before committing time and capital. Institutions get completion-likelihood signals beyond academic records. Lenders get repayment-behaviour predictors that work for thin-file applicants without an established credit history. The same psychometric data point underwrites all three decisions, replacing the fragmented and asymmetric inputs each party currently relies on.
 
 **Purpose of the Assessment:**
 
@@ -34,9 +35,11 @@ The first cycle began with construct mapping and item generation, grounded in es
 
 # **1) Conceptualisation**
 
-AXCESSR is a psychometric-based credit risk assessment platform designed to extend financial access to individuals overlooked by traditional credit origination methods - either due to limited credit history or an overestimation of risk based on conventional metrics. Rather than relying on historical financial data, the platform evaluates creditworthiness through the measurement of stable personal dispositions shown to predict financial decision-making and repayment behaviour.
-
 Figma Conceptualisation Presentation Link -> https://www.figma.com/deck/BWVGJvpN2KeOfJEtiEwUf5
+
+**The problem:**
+
+AXCESSR is a psychometric-based credit risk assessment platform designed to extend financial access to individuals overlooked by traditional credit origination methods - either due to limited credit history or an overestimation of risk based on conventional metrics. Rather than relying on historical financial data, the platform evaluates creditworthiness through the measurement of stable personal dispositions shown to predict financial decision-making and repayment behaviour.
 
 *Figure 2. The Funding Access Gap*
 
