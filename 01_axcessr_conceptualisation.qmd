@@ -16,14 +16,14 @@ format:
     embed-resources: true
 editor: 
   markdown: 
-    wrap: 72
+    wrap: sentence
 execute:
   freeze: auto
 ---
 
 Use the navigation panel on the left to move through the three development phases of AXCESSR, and the panel on the right to navigate sections within each phase.
 
-# Introduction
+# Background
 
 Three parties make every student-funding decision: the student, the
 institution, and the lender. None of them have the data they need to
@@ -33,14 +33,14 @@ In South Africa, roughly 68 000 "missing middle" students sit in the gap
 between government bursaries (capped at R350,000 household income) and
 self-funding affordability - and even after recent policy reforms
 introducing loan funding for the R350K–R600K income band, only about 47%
-currently receive any support.\[\^1\] South Africa's first-year
+currently receive any support.[^1] South Africa's first-year
 university dropout rate sits at 35 – 40%, with financial exclusion and
-poor programmatic fit consistently identified as primary drivers.\[\^2\]
+poor programmatic fit consistently identified as primary drivers.[^2]
 In the United States, the picture is no better: as of December 2025,
 approximately \$180 billion in federal student loans were in default
 across 7.7 million borrowers, and 29.5% of the active portfolio was
 delinquent by dollar balance - more than double the pre-pandemic
-rate.\[\^3\] These outcomes share a common cause: students, higher
+rate.[^3] These outcomes share a common cause: students, higher
 education institutions, and lenders are all making high-stakes decisions
 on incomplete and asymmetric information about who will succeed
 academically and financially.
@@ -60,7 +60,7 @@ inputs each party currently relies on.
 
 *AXCESSR Overview*
 
-<img width="700" height="400" alt="AXCESSR Overview" src="https://github.com/user-attachments/assets/034d5d19-c509-4c79-9119-463f6acf51b3" />
+<img width="600" height="350" alt="AXCESSR Overview" src="https://github.com/user-attachments/assets/034d5d19-c509-4c79-9119-463f6acf51b3" />
 
 AXCESSR sits at the centre of the funding ecosystem, generating tailored
 information for each stakeholder it serves. The *applicant* receives a
@@ -183,7 +183,7 @@ construction
 
 *Frameworks Underpinning the AXCESSR Item Pool Development*
 
-<img src="https://github.com/user-attachments/assets/dbdc4bed-83db-49b3-99f0-bf6d39f32f78" alt="Instrument Design" width="1000" height="700"/>
+<img width="700" height="500" alt="Instrument Design" src="https://github.com/user-attachments/assets/dbdc4bed-83db-49b3-99f0-bf6d39f32f78" />
 
 Every item in the AXCESSR pool traces back to a documented psychological
 construct. Items were not written opportunistically - each one was
@@ -217,3 +217,10 @@ Item responses → Subfactor score → Factor score → Domain score → Risk
 profile
 
 # References
+
+[^1]: NSFAS (National Student Financial Aid Scheme) and the Department of Higher Education and Training, Comprehensive Student Funding Model and Missing Middle Loan Funding Programme (announced 2023, ongoing implementation). See SAnews coverage at https://www.sanews.gov.za/south-africa/nzimande-announces-r38bn-funding-missing-middle-students and policy analysis at https://www.universityworldnews.com/post.php?story=20250318114841409. Note: the formally identified missing-middle population (~68,000) reflects the policy-target estimate; broader analyses suggest the true funding-gap population is substantially larger.
+
+[^2]: South African Department of Higher Education and Training; Branson, N. (2024). South African student retention during 2020: Evidence from system-wide higher education institutional data. *South African Journal of Economics*, https://onlinelibrary.wiley.com/doi/10.1111/saje.12361. See also HSRC Policy Brief on dropout rates and BusinessTech reporting at https://businesstech.co.za/news/lifestyle/771036/university-dropout-crisis-for-south-africa/.
+
+[^3]: U.S. Department of Education, Federal Student Aid Data Center, December 2025 portfolio reports. See https://fsapartners.ed.gov/knowledge-center/library/electronic-announcements/2025-08-21/federal-student-aid-posts-updated-reports-fsa-data-center and Congressional Research Service analysis of the 2025 default cliff at https://www.congress.gov/crs-product/IF13113.
+
