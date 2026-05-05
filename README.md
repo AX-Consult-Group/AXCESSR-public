@@ -30,7 +30,7 @@ AXCESSR was not built with data science as an afterthought. From initial constru
 
 *Figure 2. AXCESSR Development Pipeline*
 
-<img width="600" height="500" alt="AXCESSR Development Pipeline V2" src="https://github.com/user-attachments/assets/f8f88d90-b866-4c3d-950c-4d32aa001feb" />
+<img width="600" height="500" alt="AXCESSR Development Pipeline V3" src="https://github.com/user-attachments/assets/7316ba5f-ab61-4b6b-86af-b7b739a0c02f" />
 
 The pipeline above illustrates the three core development phases of AXCESSR - conceptualisation, validation, and UX research - each producing data that feeds the next, and each iteration of the cycle informing a sharper version of the instrument. This is not a linear build. AXCESSR is designed to evolve: findings from validation reshape the item pool, UX research exposes where the assessment places unnecessary burden, and both inform the decisions that define the next iteration - including the move toward a Computerised Adaptive Testing (CAT) engine that shortens assessment time and reduces respondent load without sacrificing measurement precision.
 
