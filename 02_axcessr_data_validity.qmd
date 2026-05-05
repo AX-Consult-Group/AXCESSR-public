@@ -28,6 +28,7 @@ library(pacman)
 p_load(magrittr, tidyverse, psych, dplyr, prettydoc, haven, janitor, readxl, writexl, stringr, here, purrr, tibble, ggplot2, kableExtra, e1071, mirt, corrplot, lavaan, scales, patchwork, ggupset, PDtoolkit)
 ```
 
+Use the navigation panel on the left to move through the three development phases of AXCESSR, and the panel on the right to navigate sections within each phase.
 
 # Background
 
@@ -42,7 +43,7 @@ internal consistency, and discriminant validity.
 validity_data <- read_excel(here("data/AXCESSR_validity_data_isolated - 2026.04.24.xlsx"))
 ```
 
-# Validation Introduction
+# Validation
 
 Validation was conducted in two phases. In Phase 1, structural fit was evaluated using
 confirmatory factor analysis (CFA). Estimation issues - specifically, non-positive definite
@@ -66,7 +67,7 @@ knitr::include_graphics(here::here("image/axcessr_validation_pipeline.svg"))
 ```
 
 
-# Validation Summary
+## Validation Summary
 
 Validation was conducted on the full cleaned dataset (after removing low engagement respondents - speeders, boundary cases, etc.). 
 
@@ -78,7 +79,7 @@ Validation was conducted on the full cleaned dataset (after removing low engagem
 
 **IRT:** IRT analyses were conducted as isolated subfactor models. Results indicated that while some subfactors were strong, others were weak and contained several problematic items. To further evaluate item quality, first‑order (F1) loadings onto the subfactors were examined. These loadings serve as indicators of how well each item aligns with its intended factor, with higher values suggesting stronger cohesion and construct representation.
 
-# Problematic Items
+## Problematic Items
 
 Items were evaluated against a convergent set of three diagnostic criteria, CFA loading, IRT loading and item-total correlaiton (r.drop.). Flagging required
 evidence of poor performance on **all three** criteria to proceed to removal consideration.
@@ -114,7 +115,7 @@ flagging_table %>%
 ```
 
 
-## Score Distribution Comparison
+### Score Distribution Comparison
 
 The plots below show the distribution of domain-level scores before and after item removal.
 Improved item quality is expected to yield tighter, better-differentiated distributions
@@ -177,7 +178,7 @@ kbl(comparison_table,
 
 
 
-## Reliability Comparison
+### Reliability Comparison
 
 Cronbach's α was averaged across subfactors within each domain and compared between 
 the original (V1, 247 items) and revised (V2, 206 items) instruments. Three of the 
@@ -194,7 +195,7 @@ consistency without destabilising the existing structure.
 knitr::include_graphics(here::here("image/reliability_domain_dotplot.png"))
 ```
 
-## PSI
+### PSI
 To assess whether item removal materially altered candidate risk profiles, the Population Stability Index (PSI) was computed between original (V1) and revised (V2) scores at the total and domain level. PSI quantifies the distributional shift between two scoring populations and is widely used in credit risk modelling as a model monitoring metric. Scores below 0.10 indicate a stable distribution; values between 0.10 and 0.25 indicate moderate shift warranting investigation; values above 0.25 indicate significant drift requiring model review.
 
 ```{r PSI}
@@ -398,7 +399,7 @@ ggsave("image/psi_density.png", width = 10, height = 6, dpi = 180, bg = "white")
 The density curves corroborate the PSI findings. For Emotion Traits and Personality, the V1 and V2 distributions are almost indistinguishable. Emotion States and Total Risk show a slight tightening of the distribution in V2 - consistent with the removal of noisy items reducing score variance. The Values domain shows the most visible shift, with the V2 distribution marginally narrower and shifted slightly rightward, reflecting the influence of the removed items on the lower end of the score range. Across all domains, the core shape of the distribution is preserved, confirming that the revised instrument measures the same underlying constructs in a substantively equivalent way.
 
 
-# Further Structural Recommendations
+## Further Structural Recommendations
 
 Item  and factor analysis identified several subfactors with overlapping variance structures,
 supporting consolidation of theoretically adjacent constructs. The following

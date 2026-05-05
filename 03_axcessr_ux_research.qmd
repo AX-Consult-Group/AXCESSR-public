@@ -27,6 +27,7 @@ library(pacman)
 p_load(magrittr, tidyverse, psych, dplyr, prettydoc, haven, janitor, readxl, writexl, stringr, here, purrr, tibble, ggplot2, kableExtra, e1071, mirt, corrplot, lavaan, scales, patchwork, ggupset)
 ```
 
+Use the navigation panel on the left to move through the three development phases of AXCESSR, and the panel on the right to navigate sections within each phase.
 
 # Background
 
