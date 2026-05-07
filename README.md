@@ -126,7 +126,7 @@ To address these issues, a flat higher‑order CFA was retained as an item‑lev
 
 *Figure 8. Item Removal Logic Summary*
 
-<img width="3016" height="1955" alt="Item Removal Figure" src="https://github.com/user-attachments/assets/79c0a52a-22f3-492c-90fa-9c792f607fe9" />
+<img width="450" height="300" alt="Item Removal Figure" src="https://github.com/user-attachments/assets/79c0a52a-22f3-492c-90fa-9c792f607fe9" />
 
 **Summary of Problematic items:**
 
