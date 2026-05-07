@@ -110,7 +110,7 @@ Item responses → Subfactor score → Factor score → Domain score → Risk pr
 
 # **2) Data Validity**
 
-This section presents the psychometric evaluation of the AXCESSR item pool - covering validity and reliability analyses, IRT diagnostics, item removal criteria, score distribution comparisons, and population stability testing across V1 and V2 of the instrument. Furthermore, the validation analyses presented here served a dual purpose. Beyond establishing the psychometric integrity of the instrument, they were conducted with an eye toward a Computerised Adaptive Testing (CAT) engine. IRT analyses were run specifically to map item difficulty range and coverage across the full risk spectrum — the information needed to determine whether the current item pool is capable of supporting adaptive item selection. This initial sample provides the first evidence base for those decisions.Below is a figure outlining the validation pipeline. 
+This section presents the psychometric evaluation of the AXCESSR item pool - covering validity and reliability analyses, IRT diagnostics, item removal criteria, score distribution comparisons, and population stability testing across V1 and V2 of the instrument. Furthermore, the validation analyses presented here served a dual purpose. Beyond establishing the psychometric integrity of the instrument, they were conducted with an eye toward a Computerised Adaptive Testing (CAT) engine. IRT analyses were run specifically to map item difficulty range and coverage across the full risk spectrum - the information needed to determine whether the current item pool is capable of supporting adaptive item selection. This initial sample provides the first evidence base for those decisions.Below is a figure outlining the validation pipeline. 
 
 *Figure 7. Validation Pipeline*
 
@@ -151,11 +151,11 @@ PSI was computed between V1 (247-item) and V2 (206-item) total and domain-level 
 
 | Variable | PSI Score | Interpretation |
 |--------------------|:------------------------------:|--------------------|
-| Total Risk (Weighted) | 0.0997 | Stable — minor shift, no action required |
-| Personality Risk | 0.0283 | Stable — distribution largely unchanged |
-| Values Risk | 0.1884 | Moderate shift — high considering only 9 items were removed |
-| Emotion Traits Risk | 0.0036 | Highly stable — negligible distributional change |
-| Emotion States Risk | 0.0420 | Stable — minimal shift across versions |
+| Total Risk (Weighted) | 0.0997 | Stable - minor shift, no action required |
+| Personality Risk | 0.0283 | Stable - distribution largely unchanged |
+| Values Risk | 0.1884 | Moderate shift - high considering only 9 items were removed |
+| Emotion Traits Risk | 0.0036 | Highly stable - negligible distributional change |
+| Emotion States Risk | 0.0420 | Stable - minimal shift across versions |
 
 The PSI results indicate that item removal had minimal impact on candidate risk classifications across most domains. Four of five scores fall within the stable range (PSI \< 0.10), with Emotion Traits Risk showing negligible shift (PSI = 0.004) and Personality Risk and Emotion States Risk both well within acceptable bounds. The moderate shift observed in Values Risk (PSI = 0.19) is notable given that only 9 items were removed from this domain - suggesting those items were disproportionately influential in shaping the score distribution. Critically, no domain exceeds the intervention threshold of 0.25.
 
