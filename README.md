@@ -122,7 +122,11 @@ Validation was conducted on the full cleaned dataset (after removing speeders, b
 
 **Item removal diagnostics:**
 
-To address these issues, a flat higher‑order CFA was retained as an item‑level diagnostic. Standardised loadings onto higher‑order factors were used as one of three convergent item quality indicators, alongside IRT loadings estimated in isolated subfactor models and corrected item‑total correlations (r.drop). Items with CFA loadings below 0.30, low IRT loadings, and weak r.drop values were flagged as problematic. These diagnostics jointly informed item removal, after which validation analyses were rerun on the reduced set. Convergent evidence across multiple methods led to the removal of 41 items, resulting in a streamlined 206‑item instrument (V2).
+To address these issues, a flat higher‑order CFA was retained as an item‑level diagnostic. Standardised loadings onto higher‑order factors were used as one of three convergent item quality indicators, alongside IRT loadings estimated in isolated subfactor models and corrected item‑total correlations (r.drop). Items with CFA loadings below 0.30, low IRT loadings, and weak r.drop values were flagged as problematic. These diagnostics jointly informed item removal, after which validation analyses were rerun on the reduced set. Convergent evidence across multiple methods led to the removal of 41 items, resulting in a streamlined 206‑item instrument (V2). Below is a figure summarising the item removal logic:
+
+*Figure 8. Item Removal Logic Summary*
+
+<img width="3016" height="1955" alt="Item Removal Figure" src="https://github.com/user-attachments/assets/79c0a52a-22f3-492c-90fa-9c792f607fe9" />
 
 **Summary of Problematic items:**
 
@@ -161,13 +165,13 @@ The PSI results indicate that item removal had minimal impact on candidate risk 
 
 The domain-level breakdown reveals where revision had the most structural impact.
 
-*Figure 8. Population Stability Index (PSI) by Domain*
+*Figure 9. Population Stability Index (PSI) by Domain*
 
 <img src="https://github.com/user-attachments/assets/4bdf8c89-24bb-4ce2-993e-9958f345b302" alt="PSI Barplot" width="1000" height="600"/>
 
 The bar chart confirms that distributional shift is concentrated in the Values domain. All other domains sit comfortably below the stable threshold, and the total weighted risk score sits precisely at the boundary (PSI = 0.10) - indicating that at the overall scoring level, V1 and V2 produce near-equivalent candidate classifications.
 
-*Figure 9. Score Distributions: V1 (247 items) vs V2 (206 items)*
+*Figure 10. Score Distributions: V1 (247 items) vs V2 (206 items)*
 
 <img src="https://github.com/user-attachments/assets/9e23745d-a946-49b0-80fe-bd023ae1fe69" alt="PSI Density" width="1000" height="600"/>
 
@@ -203,7 +207,7 @@ In order to improve response quality, A/B testing was conducted to evaluate the 
 
 Completion time is a key metric for AXCESSR as it provides a useful lens through which to examine candidate engagement, particularly as the original AXCESSR assessment (Version A) consisted of 247 items. While most respondents worked steadily through the assessment, a subset completed unusually quickly, raising concerns about inattentive responding, whilst other took over 2 hours to complete the assessment. The histogram below illustrates the spread of completion times across the full sample.
 
-*Figure 10. Total Time Taken Distribution*
+*Figure 11. Total Time Taken Distribution*
 
 <img src="https://github.com/user-attachments/assets/5b74b661-ccc0-4356-b3c8-239162a630b8" alt="Time Taken Distribution" width="550" height="300"/>
 
@@ -267,19 +271,19 @@ Version B reflects the changes in UX quality metrics following the implementatio
 
 The most immediate consequence of CAT-based adaptive delivery is a compression of completion times. Version A shows the characteristic right-skewed distribution of a fixed-form instrument — a healthy central mass with a long tail driven by connectivity issues, session abandonment, and disengagement. Version B simulates the expected shift under adaptive delivery: a tighter, more normally distributed profile centred around a shorter mean, with both extremes reduced. The disappearance of the extreme right tail reflects fewer candidates experiencing prolonged sessions, while the left tail contraction reflects the adjusted speeder threshold calibrated to the shorter instrument.
 
-*Figure 11. Completion Time Distribution Comparison*
+*Figure 12. Completion Time Distribution Comparison*
 
 <img src="https://github.com/user-attachments/assets/ee7e6539-4b5a-4992-8b85-7226b736a8ea" alt="Completion Time Distribution Comparison" width="1245" height="619"/>
 
 Four continuous UX metrics are compared below as density overlays, allowing direct visual comparison of distributional shift between versions. Click-through rate should shift leftward in Version B - fewer candidates rushing. RT consistency SD should shift rightward - more natural variation in pacing. Load time should compress toward zero following platform optimisation. Onset of disengagement should shift rightward and thin out, reflecting fewer candidates hitting a disengagement point and those who do reaching it later in the session.
 
-*Figure 12. UX Metric Distribution Comparison*
+*Figure 13. UX Metric Distribution Comparison*
 
 <img src="https://github.com/user-attachments/assets/b88fc0e9-8139-404b-ab25-7dd619614f87" alt="UX Metric Distribution Comparison" width="2112" height="1536"/>
 
 The dumbbell chart below provides a single consolidated view of improvement across all eleven UX metrics, comparing flag prevalence between Version A and Version B. Each flag is shown as a connected pair — the dark point representing Version A prevalence and the light point representing Version B. Metrics where the gap between points is largest represent the greatest UX gains from the three interventions. Metrics with little movement reflect either dispositional factors that UX changes cannot address, or infrastructure constraints that require solutions beyond instrument redesign.
 
-*Figure 13. UX Flag Prevalence Comparison*
+*Figure 14. UX Flag Prevalence Comparison*
 
 <img src="https://github.com/user-attachments/assets/04596745-9d24-43b0-a352-caed30c9d089" alt="UX Flag Prevalence" width="1920" height="1344"/>
 
@@ -302,7 +306,7 @@ An initial sample of N = 2016 candidates completed the assessment. Prior to scor
 
 The figure below illustrates the intersection structure of response quality flags across the 388 flagged candidates. Each bar represents a unique combination of criteria, with bar height indicating the number of candidates flagged by that particular combination.
 
-*Figure 14. Intersection of Response Quality Flags Across Flagged Candidates*
+*Figure 15. Intersection of Response Quality Flags Across Flagged Candidates*
 
 <img src="https://github.com/user-attachments/assets/a6fd24f8-7957-48cd-82c6-04a89e086db6" alt="Response Quality Flags Across Flagged Candidates" width="787" height="486"/>
 
@@ -312,7 +316,7 @@ The majority of flagged candidates (144) were caught by the speeder criterion al
 
 To assess differences in response consistency between groups, the figure below compares person-level variance for respondents flagged on quality checks versus those retained in the clean sample. Examining variability at the individual level provides insight into how consistently participants engaged with the assessment items.
 
-*Figure 15. Comparison of Person-Level Variance in the Flagged and Clean Sample*
+*Figure 16. Comparison of Person-Level Variance in the Flagged and Clean Sample*
 
 | Person-Level Variance in the Flagged Sample (N = 388) | Person-Level Variance in the Clean Sample (N = 1628) |
 |------------------------------------|------------------------------------|
@@ -322,7 +326,7 @@ The flagged sample (N = 388) shows a broader and more irregular spread of person
 
 To better understand how flagged respondents differ from the rest of the sample, the figure below compares score distributions across key domains. Density curves are shown for both clean and flagged groups, allowing for a direct visual comparison of their response patterns.
 
-*Figure 16. Comparison of Score Distributions Between the Flagged and Clean Sample*
+*Figure 17. Comparison of Score Distributions Between the Flagged and Clean Sample*
 
 <img src="https://github.com/user-attachments/assets/07d91c35-5a24-4667-9f1b-fc0b9e4d2e8b" alt="Comparison of Score Distributions Between the Flagged and Clean Sample" width="787" height="486"/>
 
