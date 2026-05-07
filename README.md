@@ -110,7 +110,7 @@ Item responses → Subfactor score → Factor score → Domain score → Risk pr
 
 # **2) Data Validity**
 
-This section presents the psychometric evaluation of the AXCESSR item pool - covering validity and reliability analyses, IRT diagnostics, item removal criteria, score distribution comparisons, and population stability testing across V1 and V2 of the instrument. Below is a figure outling the validaiton pipeline.
+This section presents the psychometric evaluation of the AXCESSR item pool - covering validity and reliability analyses, IRT diagnostics, item removal criteria, score distribution comparisons, and population stability testing across V1 and V2 of the instrument. Furthermore, the validation analyses presented here served a dual purpose. Beyond establishing the psychometric integrity of the instrument, they were conducted with an eye toward a Computerised Adaptive Testing (CAT) engine. IRT analyses were run specifically to map item difficulty range and coverage across the full risk spectrum — the information needed to determine whether the current item pool is capable of supporting adaptive item selection. This initial sample provides the first evidence base for those decisions.Below is a figure outlining the validation pipeline. 
 
 *Figure 7. Validation Pipeline*
 
