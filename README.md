@@ -55,7 +55,7 @@ AXCESSR is a psychometric-based credit risk assessment platform designed to exte
 
 *Figure 3. The Funding Access Gap*
 
-<img src="https://github.com/user-attachments/assets/2ea18234-df5a-4bdd-be35-c5864e69655a" alt="Funding Access Gap" width="368" height="343"/>
+<img width="350" height="340" alt="Missing Middle Figure" src="https://github.com/user-attachments/assets/5c922d73-bde3-47ef-aaee-b19a3ac31dd4" />
 
 The platform targets two primary markets: the student loan market, where millions of academically eligible students lack access to funding, and the broader personal credit market, where thin-file and credit-invisible individuals remain underserved. Psychometric scores can be generated for any candidate irrespective of formal credit history and, because scores are user-generated, they are broadly compliant with consumer privacy regulations.
 
@@ -110,7 +110,7 @@ Item responses → Subfactor score → Factor score → Domain score → Risk pr
 
 # **2) Data Validity**
 
-This section presents the psychometric evaluation of the AXCESSR item pool - covering valididty and reliability analyses, IRT diagnostics, item removal criteria, score distribution comparisons, and population stability testing across V1 and V2 of the instrument. Below is a figure outling the validaiton pipeline.
+This section presents the psychometric evaluation of the AXCESSR item pool - covering validity and reliability analyses, IRT diagnostics, item removal criteria, score distribution comparisons, and population stability testing across V1 and V2 of the instrument. Below is a figure outling the validaiton pipeline.
 
 *Figure 7. Validation Pipeline*
 
@@ -139,7 +139,7 @@ The above table summarises the three metrics used to assess the quality of items
 
 **Next steps:**
 
-These findings represent a preliminary validation stage. High‑stakes data are still being collected and will be cross‑referenced with the current results. Final decisions regarding item removal and potential subfactor collapsing will be informed by analyses conducted on the high‑stakes dataset.
+These findings represent a preliminary validation stage. High‑stakes data are still being collected and will be cross‑referenced with the current results. Final decisions regarding item removal and potential subfactor collapsing will be informed by analyses conducted on the high‑stakes dataset. Furthermore, the validation analyses presented here served a dual purpose. Beyond establishing the psychometric integrity of the instrument, they were conducted with an eye toward a Computerised Adaptive Testing (CAT) engine. IRT analyses were run specifically to map item difficulty range and coverage across the full risk spectrum — the information needed to determine whether the current item pool is capable of supporting adaptive item selection. This initial sample provides the first evidence base for those decisions.
 
 **Score Stability: Population Stability Index (PSI):**
 

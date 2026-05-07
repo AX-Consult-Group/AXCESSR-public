@@ -104,7 +104,7 @@ Rather than relying on historical financial data, the platform evaluates creditw
 
 *The Funding Access Gap*
 
-<img src="https://github.com/user-attachments/assets/2ea18234-df5a-4bdd-be35-c5864e69655a" alt="image" width="368" height="343"/>
+<img width="350" height="340" alt="Missing Middle Figure" src="https://github.com/user-attachments/assets/5c922d73-bde3-47ef-aaee-b19a3ac31dd4" />
 
 The platform targets two primary markets: the student loan market, where millions of academically eligible students lack access to funding, and the broader personal credit market, where thin-file and credit-invisible individuals remain underserved.
 Psychometric scores can be generated for any candidate irrespective of formal credit history and, because scores are user-generated, they are broadly compliant with consumer privacy regulations.

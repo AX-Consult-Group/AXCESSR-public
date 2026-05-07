@@ -63,6 +63,8 @@ diagnostics at the item level. This approach evaluates reliability,
 internal consistency, and item quality directly, without imposing a
 rigid structural model.
 
+Furthermore, the validation analyses presented here served a dual purpose. Beyond establishing the psychometric integrity of the instrument, they were conducted with an eye toward a Computerised Adaptive Testing (CAT) engine. IRT analyses were run specifically to map item difficulty range and coverage across the full risk spectrum — the information needed to determine whether the current item pool is capable of supporting adaptive item selection. This initial sample provides the first evidence base for those decisions.
+
 Below is a figure outlining the validation process.
 
 ```{r fig-pipeline}
@@ -153,7 +155,7 @@ flagging_table %>%
 The plots below show the distribution of mean domain-level scores before and
 after item removal. Improved item quality is expected to yield tighter,
 better-differentiated distributions with reduced floor and ceiling
-effects.
+effects. From the table below, we can see that mean domain scores all shifted downwards slightly after item removal.
 
 ```{r score-distributions}
 # Score Comparison Table
